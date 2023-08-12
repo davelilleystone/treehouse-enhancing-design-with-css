@@ -1,5 +1,8 @@
 /* Web Fonts ----------------------- */
-
+@font-face {
+  font-family: 'abolition regular';
+  src: url('../fonts/abolition-regular-webfont.woff');
+}
 
 /* Base Styles --------------------- */
 * {
@@ -8,6 +11,35 @@
 html {
   font-size: 1.25em; /* 20px on most screens */  
 }
+
+body{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 1rem;
+}
+
+h1{
+  font-size: 4rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 5px black;
+  letter-spacing: 2px
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+h3{
+  font-size: 1.25rem;
+}
+
+h1,h2{
+font-family: 'abolition regular', impact, charcoal, sans-serif;
+font-weight: normal;
+}
+
+
 img {
   width: 100%; /* responsive images */
 }
@@ -15,6 +47,23 @@ img {
 
 /* Main Styles --------------------- */
 
+.title{
+letter-spacing: 2px;
+}
 
+header, footer {
+  text-align: center;
+}
+
+header{
+  margin: -1rem -1rem 1rem;
+  padding: 10vh 1rem;
+  background-color: #f3753b;
+  color:white;
+}
+
+main{
+  hyphens: auto;
+}
 /* Media Queries ------------------- */
 
