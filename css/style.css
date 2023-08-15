@@ -1,5 +1,10 @@
 /* Web Fonts ----------------------- */
 
+@font-face {
+  font-family: "abolition regular";
+  src: url("../fonts/abolition-regular-webfont.woff");
+}
+
 /* Base Styles --------------------- */
 * {
   box-sizing: border-box;
@@ -7,10 +12,145 @@
 html {
   font-size: 1.25em; /* 20px on most screens */
 }
+
+body {
+  font-family: "Work Sans", sans-serif;
+  color: #454959;
+  font-weight: 300;
+  line-height: 1.5;
+  /* background-image: url("http://placekitten.com/200/300");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 500px 300px; */
+}
+
+a {
+  color: #cc4e13;
+  text-decoration: none;
+}
+
 img {
   width: 100%; /* responsive images */
+  border-radius: 10px;
+}
+
+h1,
+h2 {
+  font-family: "abolition regular", "sans serif";
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4rem;
+  text-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 /* Main Styles --------------------- */
 
+header {
+  padding: 10vh 1rem;
+  background: url("../img/mountains.jpg") #f3753b center / cover no-repeat;
+  background-blend-mode: multiply;
+  color: white;
+  margin: -8px -8px 1rem;
+}
+
+h1:after {
+  display: block;
+  width: 100%;
+  content: "\2193";
+}
+
+.title {
+  letter-spacing: 1px;
+}
+header,
+footer {
+  text-align: center;
+}
+
+main {
+  hyphens: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 3rem;
+}
+
+#wildlife {
+  padding: 20% 15%;
+  border-radius: 12px 12px 0 0;
+  border-top: 12px solid #f3753b;
+  background: url(../img/bear.jpg) #454959 no-repeat center / cover;
+  color: white;
+  box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
+}
+
+#wildlife a {
+  color: #f7a27c;
+}
+
+.callout {
+  display: block;
+  width: 250px;
+  padding: 0.25rem 1rem;
+  margin: 1rem auto;
+  /* background-image: linear-gradient(270deg, #cc4e13 0%, firebrick 50%, papayawhip 60%); */
+  background-image: linear-gradient(270deg, black 0%, orange 50%, blue 60%, yellow 80%);
+  text-align: center;
+  font-size: 1.25rem;
+  color: white;
+  border-radius: 20px / 10px;
+  box-shadow: 0 0 5px rgba(0, 10, 30, 0.5);
+}
+
+.column:first-child {
+  margin-bottom: 4rem;
+}
+
 /* Media Queries ------------------- */
+
+@media screen and (min-width: 720px) {
+  header {
+    padding: 20vh;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  h1::after {
+    margin-top: 2rem;
+  }
+
+  .intro {
+    padding: 0 15px;
+    font-size: 1.2rem;
+  }
+
+  .column {
+    display: inline-block;
+    margin-right: -4px;
+    width: 48%;
+  }
+
+  .column:first-child {
+    margin-right: calc(4% - 4px);
+    margin-bottom: 0%;
+  }
+}
